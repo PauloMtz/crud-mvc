@@ -1,4 +1,9 @@
 <?php
+
+/*
+* classe que se conecta ao banco de dados
+*/
+
 require 'env.php';
 
 $config = array();

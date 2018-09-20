@@ -1,0 +1,35 @@
+* {
+	margin: 0px;
+}
+body {
+	background-color:#EEEEEE;
+}
+header, section, footer {
+	max-width:1000px;
+	background-color: #FFFFFF;
+	margin:auto;
+}
+h2 {
+	font-family: arial;
+	padding-top: 10px;
+}
+th {
+	background: #ccc;
+}
+section {
+	min-height: 480px;
+	padding-top: 20px;
+}
+header, footer {
+	height:60px;
+	text-align:center;
+	background: #2E2E2E;
+	color: white;
+}
+
+.aviso {
+	padding:10px;
+	background-color:#FF0000;
+	border:2px solid #FFFFFF;
+	margin:10px;
+}

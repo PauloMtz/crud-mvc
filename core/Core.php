@@ -4,21 +4,8 @@ class Core {
 	public function run() {
 
 		/*
-		* testar se o Core está funcionando
-		* digitar na url: http://localhost/crud-mvc/teste
-		* com a instrução abaixo, deverá carregar URL: teste
-		* echo "URL: ".$_GET['url'];
-		* se não funcionar, verificar mod_rewrite
-		*/
-
-		/*
-		* quando o usuário acessa o sistema
-		* é possível enviar pela url pelo menos 3 informações
-		* a primeira é o controller
-		* a segunda é a action ou método
-		* a terceira ou demais são parâmetros
-		* caso não envie nada, acessa-se o controller padrão e a action padrão
-		* exemplo: http://site.com.br/controller/action/parametro/1
+		* classe que executa a dinâmica da estrutura MVC
+		* carrega o controller, action e parâmetros
 		*/
 
 		$url = '/';
@@ -59,13 +46,6 @@ class Core {
 
 		$c = new $currentController();
 		call_user_func_array(array($c, $currentAction), $params);
-
-		/*
-		echo "<hr>";
-		echo "CONTROLLER: ".$currentController."<br>";
-		echo "ACTION: ".$currentAction."<br>";
-		echo "PARAMS: ".print_r($params, true)."<br>";
-		*/
 	}
 }
 ?>

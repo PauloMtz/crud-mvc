@@ -1,10 +1,23 @@
 <?php
-class homeController {
+
+/*
+* classe que carregará a página para o usuário
+*/
+
+class homeController extends Controller {
 
 	// todo arquivoController deve ter esse método index
-	public function index() {echo 'Testando homeController.';}
+	public function index() {
 
-	// para testar: http://localhost/crud-mvc/index.php?url=home/teste
-	public function teste() {echo "Testando método teste.";}
+		$dados = array();
+
+		$usuarios = new Usuarios();
+
+		// armazena os dados em lista e manda para o view
+		$dados['lista'] = $usuarios->getAll();
+
+		// chama o loadView da classe Controller
+		$this->loadTemplate('home', $dados);
+	}
 }
 ?>
