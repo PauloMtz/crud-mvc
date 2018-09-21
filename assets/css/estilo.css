@@ -56,9 +56,11 @@ header, footer {
 }
 .content {
 	margin-top: 10px;
+	margin-left: 5%;
 }
 .form {
 	margin-left: 40%;
+	margin-top: 10px;
 }
 .aviso {
 	padding:10px;

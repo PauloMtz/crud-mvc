@@ -39,9 +39,29 @@ class usuariosController extends Controller {
 		}
 	}
 
-	// função para editar os dados
+	// recebe o id da home.php e envia para o método editar em Usuarios.php
 	public function editar($id) {
 
+		$dados = array();
+
+		if(!empty($id)) {
+			$usuarios = new Usuarios();
+
+			if(!empty($_POST['nome'])) {
+				$nome = $_POST['nome'];
+
+				$usuarios->editar($nome, $id);
+			} else {
+				$dados['info'] = $usuarios->get($id);
+
+				if(isset($dados['info']['id'])) {
+					$this->loadTemplate('editar', $dados);
+					exit;
+				}
+			}
+		}
+
+		header("Location: ".BASE_URL."index.php");
 	}
 
 	// recebe o id da home.php e envia para o método delete em Usuarios.php

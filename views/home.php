@@ -6,7 +6,7 @@
 </div>
 
 <div class="titulo">
-	<h3>Usuários ativos</h3>
+	<h2>Usuários ativos</h2>
 </div><hr>
 
 <div class="content">
@@ -28,7 +28,7 @@
 				</td>
 				<td align="center">
 					<!-- para excluir, envia o id para usuariosController -->
-					<a href="<?php echo BASE_URL; ?>usuarios/delete/<?php echo $item['id']; ?>"> Excluir </a>
+					<a href="<?php echo BASE_URL; ?>usuarios/delete/<?php echo $item['id']; ?>" onClick="return confirm('Deseja realmente excluir registro?');"> Excluir </a>
 				</td>
 			</tr>
 		<?php endforeach; ?>

@@ -3,7 +3,7 @@
 </div>
 
 <div class="titulo">
-	<h3>Adicionar usuário</h3>
+	<h2>Adicionar usuário</h2>
 </div><hr>
 
 <div class="content">

@@ -11,7 +11,7 @@ class Usuarios extends model {
 	public function getAll() {
 		$array = array();
 
-		$sql = "SELECT * FROM usuarios";
+		$sql = "SELECT * FROM usuarios ORDER BY nome";
 		$sql = $this->db_connect->query($sql);
 
 		if($sql->rowCount() > 0) {
@@ -58,5 +58,30 @@ class Usuarios extends model {
 		$sql = $this->db_connect->prepare($sql);
 		$sql->bindValue(':id', $id);
 		$sql->execute();
+	}
+
+	// recebe o id de usuariosController e edita os dados
+	public function editar($nome, $id) {
+		$sql = "UPDATE usuarios SET nome = :nome WHERE id = :id";
+		$sql = $this->db_connect->prepare($sql);
+		$sql->bindValue(':nome', $nome);
+		$sql->bindValue(':id', $id);
+		$sql->execute();
+	}
+
+	// pega os dados no banco pelo id enviado de usuariosController
+	public function get($id) {
+		$array = array();
+
+		$sql = "SELECT * FROM usuarios WHERE id = :id";
+		$sql = $this->db_connect->prepare($sql);
+		$sql->bindValue(':id', $id);
+		$sql->execute();
+
+		if($sql->rowCount() > 0) {
+			$array = $sql->fetch();
+		}
+
+		return $array;
 	}
 }
