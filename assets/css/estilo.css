@@ -7,6 +7,7 @@ body {
 header, section, footer {
 	max-width:1000px;
 	background-color: #FFFFFF;
+	/* alinha ao centro */
 	margin:auto;
 }
 h2 {
@@ -16,9 +17,13 @@ h2 {
 th {
 	background: #ccc;
 }
+/* linha zebrada */
+tr:nth-child(even) {
+    background-color: #f2f2f2
+}
 section {
-	min-height: 480px;
-	padding-top: 20px;
+	min-height: 495px;
+	padding-top: 10px;
 }
 header, footer {
 	height:60px;
@@ -26,10 +31,40 @@ header, footer {
 	background: #2E2E2E;
 	color: white;
 }
-
+.link {
+	margin: 10px;
+	text-align: right;
+	margin-right: 50px;
+}
+.link a {
+	text-decoration: none;
+	font-family: arial;
+	font-size: 15px;
+	color: #0B3861;
+	background: #ccc;
+	padding: 5px;
+	border-radius: 5px;
+	font-weight: bold;
+}
+.link a:hover {
+	color: #8A2908;
+}
+.titulo {
+	font-family: arial;
+	text-align: center;
+	margin-bottom: 10px;
+}
+.content {
+	margin-top: 10px;
+}
+.form {
+	margin-left: 40%;
+}
 .aviso {
 	padding:10px;
 	background-color:#FF0000;
 	border:2px solid #FFFFFF;
 	margin:10px;
+	color: yellow;
+	font-weight: bold;
 }
