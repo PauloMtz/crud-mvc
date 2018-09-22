@@ -6,7 +6,8 @@
 <head>
 	<title>Crud usando estrutura MVC</title>
 	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/estilo.css">
-	<script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/script.js"></script>
+	<script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/jquery.min.js"></script>
+	<script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/script.js"></script>	
 </head>
 <body>
 	<header>

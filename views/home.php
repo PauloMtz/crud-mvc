@@ -2,7 +2,7 @@
 	página que será carregada ao ser chamada pelo controller
 -->
 <div class="link">
-	<a href="<?php echo BASE_URL ?>usuarios/adicionar"> Adicionar Usuário </a>
+	<a class="modal_ajax" href="<?php echo BASE_URL ?>usuarios/adicionar"> Adicionar Usuário </a>
 </div>
 
 <div class="titulo">
@@ -24,7 +24,7 @@
 				<td><?php echo $item['nome']; ?></td>
 				<td><?php echo $item['email']; ?></td>
 				<td align="center">
-					<a href="<?php echo BASE_URL; ?>usuarios/editar/<?php echo $item['id']; ?>"> Editar </a>
+					<a href="<?php echo BASE_URL ?>usuarios/editar/<?php echo $item['id']; ?>" class="modal_ajax"> Editar </a>
 				</td>
 				<td align="center">
 					<!-- para excluir, envia o id para usuariosController -->
@@ -33,4 +33,11 @@
 			</tr>
 		<?php endforeach; ?>
 	</table>
+</div>
+
+<!-- inclusão do modal -->
+<div class="modal_bg">
+	<div class="modal">
+		
+	</div>
 </div>
